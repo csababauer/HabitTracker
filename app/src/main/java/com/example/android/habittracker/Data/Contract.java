@@ -1,5 +1,4 @@
 package com.example.android.habittracker.Data;
-
 import android.provider.BaseColumns;
 
 /**
@@ -10,7 +9,8 @@ public class Contract {
 
     // To prevent someone from accidentally instantiating the contract class,
     // give it an empty constructor.
-    private Contract() {}
+    private Contract() {
+    }
 
     /**
      * Inner class that defines constant values for the database table.
@@ -18,12 +18,14 @@ public class Contract {
      */
     public static final class RunEntry implements BaseColumns {
 
-        /** Name of database table for each runs */
+        /**
+         * Name of database table for each runs
+         */
         public final static String TABLE_NAME = "runs";
 
         /**
          * Unique ID number for the daily run (only for use in the database table).
-         *
+         * <p>
          * Type: INTEGER
          */
         public final static String _ID = BaseColumns._ID;
@@ -31,15 +33,13 @@ public class Contract {
         /**
          * Day of the week Type: TEXT
          */
-        public final static String COLUMN_DAY_NAME ="day";
+        public final static String COLUMN_DAY_NAME = "day";
 
         /**
          * Distance
-         *
+         * <p>
          * Type: INTEGER
          */
         public final static String COLUMN_DISTANCE = "distance";
-
-
     }
 }

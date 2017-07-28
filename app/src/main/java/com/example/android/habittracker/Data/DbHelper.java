@@ -11,6 +11,7 @@ import com.example.android.habittracker.Data.Contract.RunEntry;
 /**
  * it imports the definitions of the Contract activity's
  * this helps other classes to use RunEntry
+ * this helps other classes to use RunEntry
  */
 /** this helps other classes to use RunEntry*/
 
@@ -44,10 +45,10 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the pets table
-        String SQL_CREATE_PETS_TABLE =  "CREATE TABLE " + RunEntry.TABLE_NAME + " ("
+        String SQL_CREATE_PETS_TABLE = "CREATE TABLE " + RunEntry.TABLE_NAME + " ("
                 + RunEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + RunEntry.COLUMN_DAY_NAME + " TEXT NOT NULL, "
-                + RunEntry.COLUMN_DISTANCE + " INTEGER NOT NULL, )";
+                + RunEntry.COLUMN_DISTANCE + " INTEGER NOT NULL )";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_PETS_TABLE);
